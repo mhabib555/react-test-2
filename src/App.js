@@ -11,6 +11,7 @@ function App() {
                     <Link to="/">Home</Link>
                     <Link to="/about">About</Link>
                     <Link to="/signup">Signup</Link>
+                    <Link to="/fetchdata">Fetch Data</Link>
                 </nav>
                 <div className="flex flex-column v-align-center">
                     <Router/>

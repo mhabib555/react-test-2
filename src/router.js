@@ -3,6 +3,7 @@ import App from './App';
 import Home from './components/home.component';
 import About from './components/about.component';
 import Signup from './components/signup.component';
+import Fetchdata from './components/fetchdata.component';
 
 function Router() {
     return (
@@ -13,6 +14,8 @@ function Router() {
                 element={<About/>}/>
             <Route path="/signup"
                 element={<Signup/>}/>
+            <Route path="/fetchdata"
+                element={<Fetchdata/>}/>
         </Routes>
     )
 }

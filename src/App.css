@@ -105,3 +105,24 @@ li {
 .hidden {
   display: none;
 }
+
+
+table {
+  border-collapse: collapse;
+  max-width: 600px;
+  margin: auto;
+}
+
+
+table th {
+  background-color: #ffffff;
+  color:rgb(3, 3, 46);
+  padding: 10px;
+}
+
+table td {
+  border: 1px solid white;
+  padding: 10px;
+  text-align: left;
+}
+
