@@ -1,6 +1,15 @@
 :root {
   --primary: #ffffff;
+  --secondary: rgb(3, 3, 46);
   --dark-slate: #2f364f;
+  --font8: 18px;
+  --font28: 118px;
+}
+
+[data-theme="dark"] {
+  --primary: rgb(3, 3, 46);
+  --secondary: #ffffff;
+  --dark-slate: #b7bfdb;
   --font8: 18px;
   --font28: 118px;
 }
@@ -14,8 +23,8 @@
 
 .App {
   text-align: center;
-  background-color: rgb(3, 3, 46);
-  color: white;
+  background-color: var(--secondary);
+  color: var(--primary);
 }
 
 h2 {
@@ -56,7 +65,7 @@ h2 {
 
 .display {
   font-size: var(--font28);
-  color: white;
+  color: var(--primary);
   padding: 18px;
   transition: all 1s;
 }
@@ -66,12 +75,12 @@ nav {
   margin-top: 10px;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--primary);
   max-width: 400px;
 }
 nav a {
   padding: 8px;
-  color: white;
+  color: var(--primary);
   text-decoration: none;
   border-radius: 5px;
   transition: 0.2s all;
@@ -115,14 +124,47 @@ table {
 
 
 table th {
-  background-color: #ffffff;
-  color:rgb(3, 3, 46);
+  background-color: var(--primary);
+  color:var(--secondary);
   padding: 10px;
 }
 
 table td {
-  border: 1px solid white;
+  border: 1px solid var(--primary);
   padding: 10px;
   text-align: left;
 }
 
+.slider-btn {
+  margin-top: 15px;
+  background-color: var(--primary);
+  height: 50px;
+  width: 100px;
+  border-radius: 8px;
+  position: relative;
+  transition: 0.5 all;
+}
+
+.slider-btn input::after {
+  content: "";
+  box-sizing: border-box;
+  background-color: var(--secondary);
+  border: 5px solid var(--primary);
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 10px;
+  transition: 0.3s all;
+}
+
+.slider-btn input:checked::after {
+  transform: translateX(50px);
+}
+
+.slider-btn input {
+  height: 0;
+}
