@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import {useState} from 'react';
 import './App.css';
+import {Link, Outlet} from 'react-router-dom';
+import Router from './router';
 
 function App() {
-
-  const [count, setCount] = useState(0);
-
-  const updateCounter = (e) => {
-    setCount(count +1);
-  }
-  return (
-    <div className="App">
-      <div className="flex flex-column v-align-center h100">
-        <div className="display">{count}</div>
-        <div className="buttons">
-          <button className="btn" onClick={updateCounter}>Count</button>
+    return (
+        <div className="App">
+            <div className="h100">
+                <h2>Navigations</h2>
+                <nav>
+                    <Link to="/">Home</Link>
+                    <Link to="/about">About</Link>
+                </nav>
+                <div className="flex flex-column v-align-center">
+                    <Router/>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default App;
